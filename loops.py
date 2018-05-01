@@ -30,6 +30,8 @@ for i in range(1, 12, 1):
 #Note that it will always stop one step before the stop value in the range.
 
 #Also check this little loop out.
+varA = 200
+varB = 100
 if type(varA) == str or type(varB) == str:
     print("string involved")
 elif varA > varB:
@@ -39,3 +41,25 @@ elif varA == varB:
 else:
     print("smaller")
 #Checkin types, elif statements, elses... What else do you need?
+
+#This little snippet is a pretty cool one.
+#You can find the sum of X and all the numbers before X.
+#As seen on MIT6.001X Week 1.2 question 3 in while loops!
+
+n = 0
+X = 10
+while X > 0:
+    n += X
+    X -= 1
+print (n)
+
+#Now how do the same in a for loop??
+
+n = 0
+X = 10
+for i in range(X, 0, -1):
+    n += i
+print (n)
+
+#Wew so hard!
+
