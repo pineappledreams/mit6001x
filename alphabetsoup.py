@@ -17,14 +17,31 @@
 
 #First we need to declare an alphabet.
 
-alphabet = "abcdefghikjlmnopqrstuvwxyz"
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 #Now we would need to declare a string we would know it would work.
-test1 = "loabcdeloiman" #positive - abcdelo = 7 combo!!
+s = "abcdeloiman" #positive - abcdelo = 7 combo!!
 
+longestCombo = 1
+i = 0
+maxi = 0
 
-
-longestStreak = 0
-
-for i in range(0, len(test1), 1):
+while i < len(s):
+    if (len(s) - i <= longestCombo):
+        print("DONE")
+        break
+    starti = i
+    tempCombo = 1
     
+    while (i + 1 < len(s) and s[i] <=  s[i+1]):
+        tempCombo += 1
+        i += 1
+    
+    if tempCombo > longestCombo:
+        longestCombo = tempCombo
+        maxi = starti
+    
+    i += 1
 
+longestWord = s[maxi:maxi+longestCombo]
+print ('Longest substring in alphabetical order is: ' + str(longestWord))
+print(len(longestWord))
