@@ -8,4 +8,21 @@ def isWordGuessed(secretWord, lettersGuessed):
     '''
     # FILL IN YOUR CODE HERE...
 
-isWordGuessed("dong", ["d", "o", "n"])
+#What we need to do:
+# 1. have the word, the letters guessed, run the list hrough the listed string and see if it
+# has all the required letters in the guessed. Wait a minute....
+    goodGuess = 0
+    secretList = list(secretWord)
+    for char in secretList:
+      if char in lettersGuessed:
+        goodGuess += 1
+      else:
+        print ("TRY AGAIN!!!")
+        return False
+      if goodGuess == len(secretWord):
+        print ("YOU DONE IT BRO!")
+        return True
+
+isWordGuessed("feel", ["f", "l", "e"])
+
+
