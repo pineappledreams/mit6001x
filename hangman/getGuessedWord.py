@@ -12,9 +12,13 @@ def getGuessedWord(secretWord, lettersGuessed):
     #which will reveal a letter every time it gets added (or not added)
     #to the lettersGuessed.
 
-    secretHidden = list(secretWord)
-    for char in secretHidden:
+    secretList = list(secretWord)
+    answer = ""
+    for char in secretList:
         if char in lettersGuessed:
-            #something
+            answer += char
         else:
-            return False
+            answer += " _ "
+    print (answer)
+
+getGuessedWord("feel", ["f"])
