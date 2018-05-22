@@ -19,7 +19,38 @@ DICTIONARIES
 have keys and values.
 
 my_dict = {}
-grades = ('ana':'b', "john":'b')
+grades = ('ana':'b', 'john':'a')
+
+grades['john']
+Prints out a.
+
+grades['Sylvan'] = 'a'
+
+grades['sylvan']
+returns 'a'
+
+john in grades
+returns true
+
+daniel in grades
+returns false
+
+del{grades['ana']}
+Boom, ana's gone.
+
+dictionaries can have anything - immutable, mutable, functions, strings, ints, lists, dictionaries....
+they can have duplicates
+
+BUT
+they need unique keys. 
+key needs to be immutable - int, float, string, tuple, boolean.
+
+lists are ordered - got indexes. look up by the index. 
+index is an integer
+
+DICTIONARIES however got matching keys and values,
+look up a key to look up the value. 
+No order, any type of data. 
 
 """
 
