@@ -7,7 +7,7 @@
 int main(int argc, char *argv[])
 {
 
-    // Print error message if too much or little info is given. Exit program.
+    // Print error message if too much keywords are given. Also exits when there is nonalphanumeric garbage.
     if (argc != 2)
     {
         printf("Please enter only ONE (1) number when running for the cipher key.\n");
@@ -48,7 +48,6 @@ int main(int argc, char *argv[])
     // Apply cipher here.
     // First we check if it's alphanumeric, then we will apply the cipher.
     // UPPER RANGE: 65 - 90, lower range: 97 - 122 (25 for each...)
-
     //initialize loop for strlen - we will need it when we will have a short keyword but a long string to encrypt.
     //Every time it runs, it should modulo the index - if the index is too big, then it will modulo and start again
     //from the beginning of the keyword.
